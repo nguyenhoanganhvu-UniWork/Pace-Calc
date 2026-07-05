@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pace Calculator</title>
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/453effc9b0.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -35,7 +35,36 @@
     <button class="distance-btn" data-meters="1000">1.000</button>
   </div>
 
-  <div class="results-list">
+
+  <div class="results-list" data-unit-list="meter">
+    <div class="result-row" data-meters="60">
+      <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 60</span>
+      <span class="result-time" data-recorded="false">NT</span>
+    </div>
+    <div class="result-row" data-meters="100">
+      <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 100</span>
+      <span class="result-time" data-recorded="false">NT</span>
+    </div>
+    <div class="result-row" data-meters="200">
+      <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 200</span>
+      <span class="result-time" data-recorded="false">NT</span>
+    </div>
+    <div class="result-row" data-meters="400">
+      <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 400</span>
+      <span class="result-time" data-recorded="false">NT</span>
+    </div>
+    <div class="result-row" data-meters="800">
+      <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 800</span>
+      <span class="result-time" data-recorded="false">NT</span>
+    </div>
+    <div class="result-row" data-meters="1000">
+      <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 1.000</span>
+      <span class="result-time" data-recorded="false">NT</span>
+    </div>
+  </div>
+
+
+  <div class="results-list" data-unit-list="yard" style="display:none;">
     <div class="result-row" data-meters="60">
       <span class="result-label"><span class="calc-icon"><i class="fa-solid fa-calculator"></i></span>Avg 60</span>
       <span class="result-time" data-recorded="false">NT</span>
