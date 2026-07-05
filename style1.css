@@ -176,6 +176,223 @@ body {
   align-items: center;
   justify-content: space-between;
   background: #eceded;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 16px;
+  flex: 1;
+}
+
+.result-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.result-time {
+  font-size: 2rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-time[data-recorded="false"] {
+  color: #9a9a9a;
+  font-size: 1.6rem;
+}
+
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 600px;
+  }
+  .stopwatch-display {
+    font-size: 4rem;
+  }
+  .distance-btn {
+    font-size: 2.3rem;
+    padding: 34px 4px;
+  }
+}* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --meter-color: #0b9bdd;
+  --yard-color: #0d5aa7;
+}
+
+
+.header {
+  background: #2e2e2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 18px 16px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#reset-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+.stopwatch-display {
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 800;
+  padding: 24px 8px;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+
+.unit-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 16px;
+}
+
+.unit-label-meter {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--meter-color);
+}
+
+.unit-label-yard {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--yard-color);
+}
+.switch {
+  width: 64px;
+  height: 34px;
+  border-radius: 20px;
+  border: 2px solid #bbb;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.switch[data-unit="yard"] {
+  background: #2fa84f;
+  border-color: #2fa84f;
+}
+
+.switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.switch[data-unit="yard"] .switch-knob {
+  transform: translateX(30px);
+}
+
+
+.distance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  background: #fff;
+}
+
+.distance-btn {
+  background: var(--yard-color);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 28px 4px;
+  cursor: pointer;
+  outline-offset: -4px;
+  transition: background 0.2s ease;
+}
+
+.app[data-unit="meter"] .distance-btn {
+  background: var(--meter-color);
+}
+
+.app[data-unit="yard"] .distance-btn {
+  background: var(--yard-color);
+}
+
+.app[data-unit="meter"] .distance-btn.active {
+  outline: 3px solid var(--yard-color);
+}
+
+.app[data-unit="yard"] .distance-btn.active {
+  outline: 3px solid var(--meter-color);
+}
+
+.app[data-unit="meter"] .calc-icon{
+  color: var(--meter-color);
+}
+
+.app[data-unit="yard"] .calc-icon{
+  color: var(--yard-color);
+}
+
+.calc-icon {
+  line-height: 1;
+  font-size: 30px;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eceded;
   border-bottom: 1px soliad #d9d9d9;
   padding: 20px 16px;
   flex: 1;
