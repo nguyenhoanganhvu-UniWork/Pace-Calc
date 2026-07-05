@@ -128,12 +128,31 @@ function handleUnitToggle() {
   updateDistanceLabels();
 }
 
+function handleReset(){
+    if(isRunning){
+        stopTimerLoop();
+    }
+
+    distanceButtons.forEach(btn => btn.classList.remove('active'));
+
+    stopwatchDisplay.textContent = '00:00:00.00';
+
+    resultRows.forEach(row => {
+        const timeEl = row.querySelector('.result-time');
+        timeEl.textContent = 'NT';
+        timeEl.dataset.recorded = 'false';
+
+        isRunning = false;
+        activeMeters = null;
+        startTime = null;
+    })
+}
 
 distanceButtons.forEach(button => {
   button.addEventListener('click', () => handleDistanceClick(button));
 });
 
 unitSwitch.addEventListener('click', handleUnitToggle);
-
+resetBtn.addEventListener('click', handleReset)
 
 updateDistanceLabels();
