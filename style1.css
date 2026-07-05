@@ -15,6 +15,8 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
@@ -160,12 +162,13 @@ body {
 
 .calc-icon {
   line-height: 1;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .results-list {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .result-row {
@@ -173,8 +176,9 @@ body {
   align-items: center;
   justify-content: space-between;
   background: #eceded;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px soliad #d9d9d9;
   padding: 20px 16px;
+  flex: 1;
 }
 
 .result-label {
